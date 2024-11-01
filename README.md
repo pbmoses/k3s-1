@@ -8,6 +8,6 @@ Customizations needed:
   - cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory ---> append to /boot/firmware/cmdline.txt
   - Helm --> to install Grafana Alloy
   - Ansible --> to build automation
-  - ssh enabled at image creation time (to allow for headless access(
+  - ssh enabled at image creation time (to allow for headless access)
 
 raw_playbooks are placeholders until I build roles. 
