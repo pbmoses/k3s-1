@@ -11,3 +11,7 @@ Customizations needed:
   - ssh enabled at image creation time (to allow for headless access)
 
 raw_playbooks are placeholders until I build roles. 
+
+
+## If you run into issues starting and cgroups is enabled...
+be sure /var/lib/rancher is cleared prior to reinstall
