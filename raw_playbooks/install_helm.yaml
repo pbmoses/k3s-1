@@ -1,15 +1,15 @@
 - name: Phil's install helm
   gather_facts: false
   hosts: raspi-cluster
-  tasks: 
+  tasks:
     - name: Check if file exists
       stat:
-        path: /tmp/get_helm.sh 
+        path: /tmp/get_helm.sh
       register: result
 
     - name: Download Helm installation script
       get_url:
-        url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 
+        url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
         dest: /tmp/get_helm.sh
         mode: '0755'
       when: not result.stat.exists
@@ -20,3 +20,4 @@
         creates: /usr/local/bin/helm
       register: helm_install_result
       changed_when: false
+      
